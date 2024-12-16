@@ -1,0 +1,30 @@
+section{
+  text-align: center;
+  font-size: 24px;
+}
+
+.user_img{
+  width: 50px;
+  border-radius: 100px;
+  margin: 25px 0 0 0;
+}
+
+.user_container{
+  width: 100%;
+  top: 0;
+  display: grid;
+  grid-template-columns: 1fr 100px;
+}
+
+.login_button{
+  border-radius: 15px;
+  padding: 5px 10px;
+  background-color: transparent;
+  border: solid 3px #FF9900;
+  transition: 0.3s background;
+  font-weight: bold;
+}
+
+.login_button:hover{
+  background-color: #FF9900;
+}
