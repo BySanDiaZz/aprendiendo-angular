@@ -18,3 +18,14 @@
     </button>
   }
 </section>
+
+@if (isLoggedIn) {
+  <app-games 
+    (addFavoriteEvent)="getFavorite($event)"
+    username="{{ username }}"
+  />
+}
+
+@if(favGame !== ''){
+  <p>Tu juego favorito es {{ favGame }}</p>
+}
