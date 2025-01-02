@@ -1,0 +1,15 @@
+ng new demo-microfront-angular14 --create-application=false
+
+ng generate application mf-shell --style=scss --routing=true
+ng generate application mf-payment --style=scss
+ng generate application mf-shopping --style=scss --routing=true
+
+ng generate library  commons-lib
+  
+npm install -D @angular-architects/module-federation@14.3.14
+
+ng add @angular-architects/module-federation --project mf-shell --port 4200 --type host
+ng add @angular-architects/module-federation --project mf-shopping --port 4201 --type remote
+ng add @angular-architects/module-federation --project mf-payment --port 4202 --type remote
+
+ng serve mf-shopping
